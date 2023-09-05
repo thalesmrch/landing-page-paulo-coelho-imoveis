@@ -1,0 +1,47 @@
+.container-nav, nav, ul, li {
+    background-color: blue;
+    color: white;
+    display: flex;
+}
+
+.container-imovel {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+#img-imovel {
+    width: 50vw;
+    height: 100vh;
+}
+
+.container-planta, .container-planta img {
+    height: 100vh;
+    width: 100vw;
+}
+
+.container-planta h1 {
+    text-align: center;
+}
+
+#titulo-galeria{
+    text-align: center;
+}
+
+.container-galeria {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#img-galeria {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+}

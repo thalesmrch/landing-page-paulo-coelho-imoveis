@@ -1,47 +1,30 @@
-.container-nav, nav, ul, li {
-    background-color: blue;
-    color: white;
+header img {
+    max-width: 100%;
+}
+
+.container-main {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.nav-main {
+    background-color: #c8b8b0;
+}
+
+.ul-nav {
+    list-style-type: none;
+    padding: 0;
     display: flex;
-}
-
-.container-imovel {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-}
-
-#img-imovel {
-    width: 50vw;
-    height: 100vh;
-}
-
-.container-planta, .container-planta img {
-    height: 100vh;
-    width: 100vw;
-}
-
-.container-planta h1 {
+    justify-content: space-around;
     text-align: center;
 }
 
-#titulo-galeria{
-    text-align: center;
+.li-nav {
+    flex: 1;
+    padding: 10px;
 }
 
-.container-galeria {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-#img-galeria {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 150px;
-    height: 150px;
-    margin: 10px;
+.li-nav a {
+    text-decoration: none;
+    color: black;
 }

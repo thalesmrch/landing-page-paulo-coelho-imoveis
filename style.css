@@ -73,8 +73,75 @@ header img {
     flex: 1;
     padding-top: 30px;
     margin-top: 25px;
+    text-align: left;
 }
 
-.content-imovel-main h2 {
+.imovel-nome, .imovel-bairro {
+    margin-bottom: 6px;
+}
+
+.imovel-nome {
+    font-size: 28px;
+    font-weight: 700;
+    color: #565656;
+}
+
+.imovel-bairro {
     font-weight: 700;
 }
+
+.imovel-status {
+    font-size: 16px;
+    background-color: #c8b8b0;
+    display: inline-block;
+    padding: 5px;
+}
+
+.content-imovel-info {
+    margin-top: 20px;
+}
+
+.content-imovel-info ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+}
+
+.content-imovel-info li {
+    text-align: left;
+}
+
+.content-imovel-info li h3 {
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #897773;
+}
+
+.content-imovel-info li p {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.content-imovel-descricao {
+    margin-top: 50px;
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, auto);
+    gap: 10px;
+    margin-right: 100px;
+}
+
+.content-imovel-descricao h2 {
+    font-weight: 500;
+    color: #897773;
+    font-size: 22px;
+    text-align: justify;
+}
+
+.content-imovel-descricao p {
+    text-align: justify;
+}
+

@@ -1,7 +1,18 @@
-header img {
-    max-width: 100%;
+* {
+    font-family: 'Source Sans 3', sans-serif;
 }
 
+
+
+/*     HEADER     */
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/*     MAIN    */
 .container-main {
     max-width: 100%;
     margin: 0 auto;
@@ -9,6 +20,15 @@ header img {
 
 .nav-main {
     background-color: #c8b8b0;
+
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .ul-nav {
@@ -27,4 +47,34 @@ header img {
 .li-nav a {
     text-decoration: none;
     color: black;
+}
+
+
+
+/*     CONTEUDO IMÓVEL    */
+.container-imovel img {
+    max-width: 100%;
+    height: auto;
+    padding: 30px 30px;
+    margin-top: 25px;
+    box-sizing: border-box;
+}
+
+.section-imovel {
+    display: flex;
+}
+
+.container-imovel {
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.content-imovel {
+    flex: 1;
+    padding-top: 30px;
+    margin-top: 25px;
+}
+
+.content-imovel-main h2 {
+    font-weight: 700;
 }

@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="./script.js" defer></script>
     <title>Paulo Coelho Imóveis</title>
 </head>
 <body>
@@ -14,7 +18,7 @@
     
     <main class="container-main">
 
-        <nav class="nav-main">
+        <nav class="nav-main" id="fixedNav">
             <ul class="ul-nav">
                 <li class="li-nav">
                     <a href="">Residencial Cícero Barreto</a>
@@ -34,18 +38,18 @@
             </ul>
         </nav>
 
-        <section>
-            <div>
+        <section class="section-imovel">
+            <div class="container-imovel">
                 <img src="./assets/img/img1.jpg" alt="">
             </div>
-            <div>
-               <div>
+            <div class="content-imovel">
+               <div class="content-imovel-main">
                 <h2>Residencial Cícero Barreto</h2>
                 <p>Noal</p>
                 <p>Exclusivo</p>
                </div>
                
-               <div>
+               <div class="content-imovel-info">
                 <ul>
                     <li>
                         <p>73,64 m²</p>
@@ -73,7 +77,11 @@
     </main>
 
     <footer></footer>
+    
+   
+    
 
 </body>
+
 
 </html>

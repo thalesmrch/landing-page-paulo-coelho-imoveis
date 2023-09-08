@@ -5,14 +5,18 @@
 
 
 /*     HEADER     */
+header {
+    
+}
+
 header img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
 
 
-/*     MAIN    */
+/*     NAVEGAÇÃO MAIN   */
 .container-main {
     max-width: 100%;
     margin: 0 auto;
@@ -52,11 +56,14 @@ header img {
 
 
 /*     CONTEUDO IMÓVEL    */
+.section-imovel {
+    display: flex;
+    margin: 25px 30px;
+}
+
 .container-imovel img {
     max-width: 100%;
     height: auto;
-    padding: 30px 30px;
-    margin-top: 25px;
     box-sizing: border-box;
 }
 
@@ -71,8 +78,6 @@ header img {
 
 .content-imovel {
     flex: 1;
-    padding-top: 30px;
-    margin-top: 25px;
     text-align: left;
 }
 
@@ -131,7 +136,6 @@ header img {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, auto);
     gap: 10px;
-    margin-right: 100px;
 }
 
 .content-imovel-descricao h2 {

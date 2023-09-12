@@ -1,30 +1,104 @@
 * {
     font-family: 'Source Sans 3', sans-serif;
+    box-sizing: border-box;
 }
 
+main {
+    display: block;
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 6%;
+    box-sizing: border-box;
+}
 
-
-/*     HEADER     */
 header {
-    
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: #c8b8b0;
 }
 
-header img {
+
+
+
+
+.nav-header-top {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around; /* Centralizar horizontalmente */
+    align-items: center;
+    padding: 20px 0; /* Ajuste o espaçamento vertical */
+    z-index: 1000;
+    position: absolute;
+}
+
+.logo img {
+    width: 180px;
+    height: 60px;
+}
+
+/* Estilize o botão do menu */
+.menu-button img {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+/* Estilize as opções do menu */
+.menu-options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.menu-options li {
+    margin: 5px 0;
+}
+
+.menu-options li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Mostrar as opções do menu quando o botão do menu é clicado */
+.menu-button:hover .menu-options {
+    display: block;
+}
+
+/* Estilize os ícones de redes sociais */
+.social-icons a {
+    margin-left: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.img-fundo {
     width: 100%;
     height: auto;
 }
 
-
-
-/*     NAVEGAÇÃO MAIN   */
-.container-main {
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-.nav-main {
+.nav-header-bottom {
     background-color: #c8b8b0;
-
 }
 
 .fixed {
@@ -35,7 +109,7 @@ header img {
     z-index: 1000;
 }
 
-.ul-nav {
+.ul-header-bottom {
     list-style-type: none;
     padding: 0;
     display: flex;
@@ -43,42 +117,41 @@ header img {
     text-align: center;
 }
 
-.li-nav {
+.li-header-bottom {
     flex: 1;
     padding: 10px;
 }
 
-.li-nav a {
+.li-header-bottom a {
     text-decoration: none;
     color: black;
 }
 
+.container-main {
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+}
 
-
-/*     CONTEUDO IMÓVEL    */
 .section-imovel {
     display: flex;
     margin: 25px 30px;
-}
-
-.container-imovel img {
-    max-width: 100%;
-    height: auto;
-    box-sizing: border-box;
-}
-
-.section-imovel {
-    display: flex;
 }
 
 .container-imovel {
     flex: 1;
     box-sizing: border-box;
 }
+.container-imovel img {
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
 
 .content-imovel {
     flex: 1;
     text-align: left;
+    padding-left: 10px;
 }
 
 .imovel-nome, .imovel-bairro {

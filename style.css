@@ -20,17 +20,13 @@ header {
     background-color: #c8b8b0;
 }
 
-
-
-
-
 .nav-header-top {
     width: 100%;
     max-width: 100%;
     display: flex;
-    justify-content: space-around; /* Centralizar horizontalmente */
+    justify-content: space-around;
     align-items: center;
-    padding: 20px 0; /* Ajuste o espaçamento vertical */
+    padding: 20px 0;
     z-index: 1000;
     position: absolute;
 }
@@ -40,15 +36,14 @@ header {
     height: 60px;
 }
 
-/* Estilize o botão do menu */
 .menu-button img {
     cursor: pointer;
     width: 30px;
     height: 30px;
 }
 
-/* Estilize as opções do menu */
 .menu-options {
+    font-family: 'Source Sans 3', sans-serif;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -64,12 +59,10 @@ header {
     text-decoration: none;
 }
 
-/* Mostrar as opções do menu quando o botão do menu é clicado */
 .menu-button:hover .menu-options {
     display: block;
 }
 
-/* Estilize os ícones de redes sociais */
 .social-icons a {
     margin-left: 10px;
 }
@@ -79,19 +72,6 @@ header {
     height: 30px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .img-fundo {
     width: 100%;
     height: auto;
@@ -99,6 +79,10 @@ header {
 
 .nav-header-bottom {
     background-color: #c8b8b0;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 6%;
+    box-sizing: border-box;
 }
 
 .fixed {
@@ -123,6 +107,7 @@ header {
 }
 
 .li-header-bottom a {
+    font-family: 'Source Sans 3', sans-serif;
     text-decoration: none;
     color: black;
 }
@@ -135,7 +120,7 @@ header {
 
 .section-imovel {
     display: flex;
-    margin: 25px 30px;
+    margin: 25px auto;
 }
 
 .container-imovel {
@@ -222,3 +207,66 @@ header {
     text-align: justify;
 }
 
+
+
+
+.imovel-galeria {
+    width: 100%;
+}
+
+.imovel-galeria h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #565656;
+
+}
+
+.ul-imovel-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribui os itens igualmente nas linhas */
+}
+
+.li-imovel-galeria {
+    width: calc(25% - 10px); /* 25% de largura para 4 imagens por linha, com margem de 10px entre elas */
+    margin-bottom: 20px; /* Espaçamento inferior entre as imagens */
+    box-sizing: border-box; /* Garante que as margens não aumentem a largura total */
+}
+
+.imovel-galeria-img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove espaços em branco sob as imagens */
+}
+
+
+
+
+
+
+.imovel-localizacao {
+    width: 100%;
+}
+
+.container-imovel-localizacao {
+    text-align: center;
+}
+
+.container-imovel-localizacao h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #565656;
+}
+
+.container-imovel-localizacao p {
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.img-localizacao {
+    width: 100%;
+}

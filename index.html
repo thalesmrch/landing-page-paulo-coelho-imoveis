@@ -29,8 +29,6 @@
                 <img src="./assets/img/logo-paulo-coelho.png" alt="Logo da Paulo Coelho Imóveis">
             </div>
             <div class="social-icons">
-                <a href="#"><img src="./assets/img/instagram.png" alt="Instagram"></a>
-                <a href="#"><img src="./assets/img/facebook.png" alt="Facebook"></a>
                 <a href="#"><img src="./assets/img/whatsapp.png" alt="WhatsApp"></a>
             </div>
         </nav>
@@ -163,31 +161,44 @@
             </div>
         </section>
 
-        <section>
-            <div>
-                <form action="">
+        <section class="formulario">
+          <h2>Gostaria de saber mais?</h2>
+          <form action="processar_formulario.php" method="POST">
 
-                    <h2>GOSTARIA DE SABER MAIS?</h2>
-
-                    <label id="label1" for="input-nome">Nome</label>
-                    <input name="nome" id="input" type="text" placeholder="Digite seu nome aqui..." required="true">
-
-                    <label id="label1" for="input-email">Email</label>
-                    <input name="email" id="input" type="email" placeholder="Digite seu email aqui..." required="true">
-
-                    <label id="label1" for="textarea-motivo">Escreva sua mensagem</label>
-                    <textarea 
-                    name="motivo" 
-                    id="textarea" 
-                    cols="26" 
-                    rows="8"
-                    required="true" 
-                    placeholder="Escreva aqui..."></textarea>
-
-                    <button type="submit">Enviar</button>
-                </form>
+            <div class="form">
+              <div class="form-nome">
+                <input type="text" id="nome" name="nome" placeholder="Digite o seu nome completo" required>
+              </div>
+              <div class="form-email">
+                <input type="email" id="email" name="email" placeholder="Digite o seu e-mail" required>
+              </div>
             </div>
+
+            <div class="form">
+              <div class="form-tel">
+                <input type="tel" id="celular" name="celular" placeholder="+55 (__) ____-____" required>
+              </div>
+            </div>
+
+            <textarea id="mensagem" name="mensagem" rows="2" cols="50" placeholder="Digite sua mensagem" required></textarea>
+
+            <!-- Caixa de seleção para os termos de privacidade -->
+            <input type="checkbox" id="termos" name="termos" required>
+            <label for="termos">Declaro que li e aceito os termos da Política de Privacidade da Paulo Coelho Imóveis</label>
+            <br><br>
+
+            <!-- Caixa de seleção para comunicações e atendimento -->
+            <input type="checkbox" id="comunicacoes" name="comunicacoes" required>
+            <label for="comunicacoes">Estou de acordo em receber comunicações e ser acessado para possível atendimento</label>
+            <br><br>
+
+            <div class="form-button">
+              <input type="submit" value="Enviar">
+            </div>
+            
+          </form>
         </section>
+        
     </main>
 
 

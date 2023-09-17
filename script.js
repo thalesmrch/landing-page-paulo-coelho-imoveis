@@ -10,6 +10,10 @@ window.addEventListener('scroll', function () {
     }
 });
 
+
+
+
+
 let currentImageIndex = 0;
 const images = document.querySelectorAll('.galeria-slide img');
 const ampliada = document.querySelector('.ampliada');
@@ -48,3 +52,4 @@ images.forEach((image) => {
   const img = new Image();
   img.src = image.src;
 });
+

@@ -411,3 +411,99 @@ header {
     outline: none;
     width: 10%;
 }
+
+
+
+
+
+
+
+
+footer {
+    background-color: #0f203e;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+.container-footer {
+    display: flex;
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 6%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    display: block;
+}
+
+.links ul {
+    display: flex;
+}
+
+
+
+.icons-social {
+    width: 30px;
+    height: 30px;
+}
+
+.logo-footer {
+    width: 180px;
+    height: 60px;
+}
+
+.copy {
+    text-align: center;
+    color: white;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: small;
+    padding: 10px;
+}
+
+.copy a {
+    border: none;
+    color: #fff;
+    transition: color 0.5s ease; /* Adicione uma transição suave para a mudança de cor */
+}
+
+.copy a:hover {
+    color: orange; /* Muda a cor do texto para laranja no hover */
+}
+
+.content-link {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.content-link li {
+    margin: 0px 25px 5px 0;
+}
+
+.content-link li h3 {
+    color: #fff;
+    font-size: large;
+    margin-bottom: 10px;
+}
+
+.content-link li a {
+    color: #b5b2b2;
+    text-decoration: none;
+    font-size: small;
+    transition: color 0.5s ease; /* Adicione uma transição suave para a mudança de cor */
+}
+
+.content-link li a:hover {
+    color: orange; /* Muda a cor do texto para laranja no hover */
+}
+
+.content-contato {
+    display: flex;
+}
+
+.content-contato li {
+    margin: 5px 10px 0 0;
+}

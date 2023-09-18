@@ -22,7 +22,7 @@ header {
 
 .nav-header-top {
     width: 100%;
-    max-width: 100%;
+    max-width: 1600px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -31,6 +31,8 @@ header {
     position: absolute;
     box-shadow: inset 0px 53px 40px -20px rgba(0,0,0,0.75);
 }
+
+
 
 .logo img {
     width: 180px;
@@ -48,7 +50,6 @@ header {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: none;
 }
 
 .menu-options li {
@@ -111,7 +112,54 @@ header {
     font-family: 'Source Sans 3', sans-serif;
     text-decoration: none;
     color: #ffff;
+    position: relative; /* Necessário para a borda */
+    padding-bottom: 2px; /* Espessura da borda inicial (pode ajustar conforme necessário) */
 }
+
+.li-header-bottom a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; /* Espessura da borda laranja */
+    background-color: orange;
+    transform: scaleX(0); /* Inicialmente, a borda está invisível */
+    transform-origin: bottom left; /* A partir do canto inferior esquerdo */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+}
+
+.li-header-bottom a:hover::after {
+    transform: scaleX(1); /* Mostra a borda laranja no hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .container-main {
     width: auto;

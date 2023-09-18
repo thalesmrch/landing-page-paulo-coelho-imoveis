@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="./assets/img/favicon.png">
   <link rel="stylesheet" href="./reset.css">
   <link rel="stylesheet" href="./style.css">
-  <link rel="preconnect" href="https://fonts.googleapi    s.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
@@ -20,14 +20,18 @@
   <header>
 
     <nav class="nav-header-top">
-      <div class="menu-button">
-        <img src="./assets/img/menu.png" alt="Menu">
-        <ul class="menu-options">
+
+      <div class="menu-container">
+        <div class="menu-button" id="menu-button">
+          <img src="./assets/icons/menu.png" alt="Menu" id="menu-icon">
+        </div>
+        <ul class="menu-options hidden" id="menu-options">
           <li><a href="#">A PAULO COELHO</a></li>
           <li><a href="https://www.paulocoelhoimoveis.com.br/imoveis/a-venda">IMÓVEIS À VENDA</a></li>
           <li><a href="#">FALE CONOSCO</a></li>
         </ul>
       </div>
+
       <div class="logo">
         <img src="./assets/img/logo-paulo-coelho.png" alt="Logo da Paulo Coelho Imóveis">
       </div>
@@ -45,15 +49,15 @@
         </li>
 
         <li class="li-header-bottom">
-          <a href="">Apartamento</a>
+          <a href="#section-imovel">Apartamento</a>
         </li>
 
         <li class="li-header-bottom">
-          <a href="">Empreendimento</a>
+          <a href="#imovel-galeria">Empreendimento</a>
         </li>
 
         <li class="li-header-bottom">
-          <a href="">Localização</a>
+          <a href="#imovel-localizacao">Localização</a>
         </li>
       </ul>
     </nav>
@@ -102,7 +106,7 @@
       </div>
     </section>
 
-    <section class="imovel-galeria">
+    <section class="imovel-galeria" id="imovel-galeria">
       <div class="container-imovel-galeria">
         <h2>Empreendimento Cícero Barreto</h2>
         <div class="galeria">
@@ -154,7 +158,7 @@
       <img id="imagem-ampliada" src="" alt="">
     </div>
 
-    <section class="imovel-localizacao">
+    <section class="imovel-localizacao" id="imovel-localizacao">
       <div class="container-imovel-localizacao">
 
         <h2>Localização</h2>

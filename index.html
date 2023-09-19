@@ -33,10 +33,10 @@
       </div>
 
       <div class="logo">
-        <img src="./assets/img/logo-paulo-coelho.png" alt="Logo da Paulo Coelho Imóveis">
+        <img src="./assets/icons/logo-paulo-coelho.png" alt="Logo da Paulo Coelho Imóveis">
       </div>
       <div class="social-icons">
-        <a href="#"><img src="./assets/img/whatsapp.png" alt="WhatsApp"></a>
+        <a href="#"><img src="./assets/icons/Whatsapp.png" alt="WhatsApp"></a>
       </div>
     </nav>
 
@@ -106,57 +106,38 @@
       </div>
     </section>
 
+    <!-- Inicio da Section Galeria de Imagens do Imóvel -->
+
     <section class="imovel-galeria" id="imovel-galeria">
-      <div class="container-imovel-galeria">
-        <h2>Empreendimento Cícero Barreto</h2>
-        <div class="galeria">
-          <button class="prev-button" onclick="prevImage()">&#10094;</button>
-          <div class="galeria-slides">
-            <div class="galeria-slide">
-              <img class="imovel-galeria-img" src="./assets/img/foto-2.jpg" alt="">
-            </div>
-            <div class="galeria-slide">
-              <img class="imovel-galeria-img" src="./assets/img/foto-2.jpg" alt="">
-            </div>
-            <div class="galeria-slide">
-              <img class="imovel-galeria-img" src="./assets/img/foto-3.jpg" alt="">
-            </div>
-            <div class="galeria-slide">
-              <img class="imovel-galeria-img" src="./assets/img/foto-4.jpg" alt="">
-            </div>
-            <div class="galeria-slide">
-              <img class="imovel-galeria-img" src="./assets/img/foto-5.jpg" alt="">
-            </div>
-            <div class="galeria-slide">
-              <img class="imovel-galeria-img" src="./assets/img/foto-6.jpg" alt="">
-            </div>
-            <div class="galeria-slide">
-              <img class="imovel-galeria-img" src="./assets/img/foto-7.jpg" alt="">
-            </div>
-            <div class="galeria-slide">
-              <img class="imovel-galeria-img" src="./assets/img/foto-8.jpg" alt="">
-            </div>
-            <div class="galeria-slide">
-              <img class="imovel-galeria-img" src="./assets/img/foto-9.jpg" alt="">
-            </div>
-            <div class="galeria-slide">
-              <img class="imovel-galeria-img" src="./assets/img/foto-10.jpg" alt="">
-            </div>
-            <div class="galeria-slide">
-              <img class="imovel-galeria-img" src="./assets/img/foto-11.jpg" alt="">
-            </div>
-            <div class="galeria-slide">
-              <img class="imovel-galeria-img" src="./assets/img/foto-2.jpg" alt="">
-            </div>
-          </div>
-          <button class="next-button" onclick="nextImage()">&#10095;</button>
+      <h2>Empreendimento Cícero Barreto</h2>
+      <div class="slide-container">
+        <button class="prev-button" onclick="prevImage()">&#10094;</button>
+        <img class="slide-image" src="/assets/img/foto-1.jpg" alt="Imagem 1" onclick="openImage(0)">
+        <img class="slide-image" src="/assets/img/foto-2.jpg" alt="Imagem 2" onclick="openImage(1)">
+        <img class="slide-image" src="/assets/img/foto-3.jpg" alt="Imagem 2" onclick="openImage(2)">
+        <img class="slide-image" src="/assets/img/foto-4.jpg" alt="Imagem 2" onclick="openImage(3)">
+        <img class="slide-image" src="/assets/img/foto-5.jpg" alt="Imagem 2" onclick="openImage(4)">
+        <img class="slide-image" src="/assets/img/foto-6.jpg" alt="Imagem 2" onclick="openImage(5)">
+        <img class="slide-image" src="/assets/img/foto-7.jpg" alt="Imagem 2" onclick="openImage(6)">
+        <img class="slide-image" src="/assets/img/foto-8.jpg" alt="Imagem 2" onclick="openImage(7)">
+        <img class="slide-image" src="/assets/img/foto-9.jpg" alt="Imagem 2" onclick="openImage(8)">
+        <img class="slide-image" src="/assets/img/foto-10.jpg" alt="Imagem 2" onclick="openImage(9)">
+        <img class="slide-image" src="/assets/img/foto-11.jpg" alt="Imagem 2" onclick="openImage(10)">
+        <img class="slide-image" src="/assets/img/foto-12.jpg" alt="Imagem 2" onclick="openImage(11)">
+        <button class="next-button" onclick="nextImage()">&#10095;</button>
+      </div>
+
+      <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-button-container">
+          <button class="modal-prev-button" onclick="prevModalImage()">&#10094;</button>
+          <img class="modal-content" id="modalImage" onclick="nextModalImage()">
+          <button class="modal-next-button" onclick="nextModalImage()">&#10095;</button>
         </div>
       </div>
     </section>
 
-    <div class="ampliada" onclick="closeImage()">
-      <img id="imagem-ampliada" src="" alt="">
-    </div>
+    <!-- Fim da Section Galeria de Imagens do Imóvel -->
 
     <section class="imovel-localizacao" id="imovel-localizacao">
       <div class="container-imovel-localizacao">
@@ -183,7 +164,7 @@
             <input type="email" id="email" name="email" placeholder="Digite o seu e-mail" required>
           </div>
         </div>
-        
+
         <div class="form">
           <div class="form-tel">
             <input type="tel" id="celular" name="celular" placeholder="Digite o seu celular" required>
@@ -222,7 +203,9 @@
         <ul class="content-link">
           <li>
             <ul>
-              <li><h3>Institucional</h3></li>
+              <li>
+                <h3>Institucional</h3>
+              </li>
               <li><a href="">Nossa essência</a></li>
               <li><a href="">Nossa história</a></li>
               <li><a href="">Diferenciais</a></li>
@@ -232,7 +215,9 @@
           </li>
           <li>
             <ul>
-              <li><h3>Imóveis à venda</h3></li>
+              <li>
+                <h3>Imóveis à venda</h3>
+              </li>
               <li><a href="">Estância dos Montes</a></li>
               <li><a href="">Omni Sky</a></li>
               <li><a href="">Aspen</a></li>
@@ -242,7 +227,9 @@
           </li>
           <li>
             <ul>
-              <li><h3>Contato</h3></li>
+              <li>
+                <h3>Contato</h3>
+              </li>
               <li><a href="">Nosso escritório</a></li>
               <li><a href="">Compra de terrenos</a></li>
               <li><a href="">Trabalhe conosco</a></li>
@@ -252,21 +239,22 @@
         </ul>
 
         <div>
-          <img class="logo-footer" src="./assets/img/logo-paulo-coelho.png" alt="Logo da Paulo Coelho Imóveis">
+          <img class="logo-footer" src="./assets/icons/logo-paulo-coelho.png" alt="Logo da Paulo Coelho Imóveis">
         </div>
       </div>
       <div class="contato">
         <ul class="content-contato">
-          <li><a href="#"><img class="icons-social" src="./assets/img/whatsapp.png" alt="WhatsApp"></a></li>
-          <li><a href="#"><img class="icons-social" src="./assets/img/whatsapp.png" alt="WhatsApp"></a></li>
-          <li><a href="#"><img class="icons-social" src="./assets/img/whatsapp.png" alt="WhatsApp"></a></li>
-          <li><a href="#"><img class="icons-social" src="./assets/img/whatsapp.png" alt="WhatsApp"></a></li>
-          <li><a href="#"><img class="icons-social" src="./assets/img/whatsapp.png" alt="WhatsApp"></a></li>
+          <li><a href="#"><img class="icons-social" src="/assets/icons/Whatsapp.png" alt="WhatsApp"></a></li>
+          <li><a href="#"><img class="icons-social" src="/assets/icons/Whatsapp.png" alt="WhatsApp"></a></li>
+          <li><a href="#"><img class="icons-social" src="/assets/icons/Whatsapp.png" alt="WhatsApp"></a></li>
+          <li><a href="#"><img class="icons-social" src="/assets/icons/Whatsapp.png" alt="WhatsApp"></a></li>
+          <li><a href="#"><img class="icons-social" src="/assets/icons/Whatsapp.png" alt="WhatsApp"></a></li>
         </ul>
       </div>
     </div>
 
-    <p class="copy">© 2023 Paulo Coelho Imóveis - Criação e desenvolvimento <a href="https://www.linkedin.com/in/thalesmrch/" target="_blank">Thales Emerich</a> :)</p>
+    <p class="copy">© 2023 Paulo Coelho Imóveis - Criação e desenvolvimento <a
+        href="https://www.linkedin.com/in/thalesmrch/" target="_blank">Thales Emerich</a> :)</p>
 
   </footer>
 

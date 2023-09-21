@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" href="./assets/img/favicon.png">
   <link rel="stylesheet" href="./reset.css">
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./assets/Fonts/Brother1816/stylesheet.css" type="text/css" >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap"
@@ -20,10 +21,9 @@
   <header>
 
     <nav class="nav-header-top">
-
       <div class="menu-container">
         <div class="menu-button" id="menu-button">
-          <img src="./assets/icons/menu.png" alt="Menu" id="menu-icon">
+          <img src="./assets/icons/menu.png" alt="">
         </div>
         <ul class="menu-options hidden" id="menu-options">
           <li><a href="#">A PAULO COELHO</a></li>
@@ -31,12 +31,13 @@
           <li><a href="#">FALE CONOSCO</a></li>
         </ul>
       </div>
-
       <div class="logo">
         <img src="./assets/icons/logo-paulo-coelho.png" alt="Logo da Paulo Coelho Imóveis">
       </div>
       <div class="social-icons">
-        <a href="#"><img src="./assets/icons/Whatsapp.png" alt="WhatsApp"></a>
+        <a href="https://api.whatsapp.com/send?phone=SEUNUMERODOTELEFONE">
+          <img src="./assets/icons/Whatsapp.png" alt="WhatsApp">
+        </a>
       </div>
     </nav>
 
@@ -141,15 +142,50 @@
 
     <section class="imovel-localizacao" id="imovel-localizacao">
       <div class="container-imovel-localizacao">
-
         <h2>Localização</h2>
-        <p>Rua Goiânia, 15, Noal - Santa Maria, Rio Grande do Sul</p>
-        <button>VER MAPA</button>
-
-        <div class="cotainer-imovel-localizacao-img">
+        <p>BR-392 - Tomazetti - Santa Maria, Rio Grande do Sul</p>
+        <button id="ver-mapa-btn">VER MAPA</button>
+        <div class="mapa" id="mapa-iframe">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.3013670518562!2d-53.7953841252358!3d-29.739990117223623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9503cbd5be2dedc9%3A0x28b00cf91b54a049!2sEst%C3%A2ncia%20dos%20Montes!5e0!3m2!1spt-BR!2sbr!4v1695164148582!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="cotainer-imovel-localizacao-img" id="imagem-localizacao">
           <img class="img-localizacao" src="./assets/img/foto-12.jpg" alt="Localização do Imóvel">
         </div>
       </div>
+    </section>
+    
+    
+
+    <section class="container-corretores">
+      <h2>Fale com um Especialista</h2>
+      <div class="content-corretores">
+        <div class="corretor">
+          <img src="./assets/icons/raphael.jpg" alt="Foto do Raphael Coelho">
+          <p>Raphael Coelho</p>
+          <button>Fale comigo</button>
+        </div>
+        <div class="corretor">
+          <img src="./assets/icons/raphael.jpg" alt="Foto do Raphael Coelho">
+          <p>Raphael Coelho</p>
+          <button>Fale comigo</button>
+        </div>
+        <div class="corretor">
+          <img src="./assets/icons/raphael.jpg" alt="Foto do Paulo Coelho">
+          <p>Raphael Coelho</p>
+          <button>Fale comigo</button>
+        </div>
+        <div class="corretor">
+          <img src="./assets/icons/raphael.jpg" alt="Foto do Paulo Coelho">
+          <p>Raphael Coelho</p>
+          <button>Fale comigo</button>
+        </div>
+        <div class="corretor">
+          <img src="./assets/icons/raphael.jpg" alt="Foto do Paulo Coelho">
+          <p>Raphael Coelho</p>
+          <button>Fale comigo</button>
+        </div>
+        
+    </div>
     </section>
 
     <section class="formulario">

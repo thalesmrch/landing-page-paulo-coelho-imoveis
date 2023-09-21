@@ -1,8 +1,15 @@
+// BARRA DE NAVEGAÇÃO PRINCIPAL
+document.getElementById("menu-button").addEventListener("click", function () {
+    let menuOptions = document.getElementById("menu-options");
+    menuOptions.classList.toggle("hidden");
+});
+
+// BARRA DE NAVEGAÇÃO SECUNDÁRIA FIXADA
 window.addEventListener('scroll', function () {
     let fixedNav = document.getElementById('fixedNav');
     let header = document.querySelector('header');
     let headerHeight = header.offsetHeight;
-    
+
     if (window.scrollY >= headerHeight) {
         fixedNav.classList.add('fixed');
     } else {
@@ -10,15 +17,7 @@ window.addEventListener('scroll', function () {
     }
 });
 
-
-
-
-
-
-
-
-
-
+// GALERIA DE IMAGENS COM SLIDE E MODAL
 let currentIndex = 0;
 const images = document.querySelectorAll('.slide-image');
 const modal = document.getElementById('imageModal');
@@ -65,7 +64,7 @@ function nextModalImage() {
 }
 
 // Adicione um evento de tecla para sair do modal quando a tecla Esc for pressionada
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') {
         closeModal();
     } else if (event.key === 'ArrowLeft') {
@@ -101,3 +100,32 @@ modalImage.addEventListener('touchmove', (e) => {
 
 // Inicialmente, exiba a primeira imagem
 showImage(currentIndex);
+
+
+
+
+
+
+// FUNCIONALIDADE BOTÃO VER MAPA
+
+document.addEventListener("DOMContentLoaded", function() {
+    const verMapaBtn = document.getElementById("ver-mapa-btn");
+    const mapaIframe = document.getElementById("mapa-iframe");
+    const imagemLocalizacao = document.getElementById("imagem-localizacao");
+  
+    // Inicialmente, o mapa está oculto
+    mapaIframe.style.display = "none";
+  
+    verMapaBtn.addEventListener("click", function() {
+      // Quando o botão é clicado, alternar a visibilidade do mapa e da imagem
+      if (mapaIframe.style.display === "none") {
+        mapaIframe.style.display = "block";
+        imagemLocalizacao.style.display = "none";
+      } else {
+        mapaIframe.style.display = "none";
+        imagemLocalizacao.style.display = "block";
+      }
+    });
+  });
+  
+  

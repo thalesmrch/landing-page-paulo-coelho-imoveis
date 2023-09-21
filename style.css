@@ -31,52 +31,85 @@ header {
 
 /* Configurações do Navigator Principal */
 
+.hidden {
+    display: none;
+}
+
 .nav-header-top {
-    width: 100%;
-    max-width: 1600px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    color: white;
+    max-width: 1600px;
+    width: 100%;
+    height: 15%;
+    margin: 0 auto;
+    padding: 15px 6% 0 6%;
+    box-sizing: border-box;
     z-index: 1000;
     position: absolute;
-    box-shadow: inset 0px 53px 40px -20px rgba(0,0,0,0.75);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.699) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+}
+
+.menu-button {
+    cursor: pointer;
+    margin-right: 20px;
+    /* Adiciona espaçamento à direita do botão */
 }
 
 .menu-button img {
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
+    max-width: 24px;
+    /* Define o tamanho máximo da imagem do botão de menu */
+    height: auto;
 }
 
 .menu-options {
-    font-family: 'Source Sans 3', sans-serif;
-    list-style: none;
+    list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
 .menu-options li {
-    margin: 5px 0;
+    margin-right: 10px;
+    /* Adiciona espaçamento à direita dos itens do menu */
+    display: inline;
+}
+
+.menu-options li::after {
+    content: "|";
+    /* Conteúdo do pseudo-elemento */
+    color: white;
+    /* Cor da barra */
+    margin-left: 10px;
+    /* Espaçamento entre a barra e o texto */
 }
 
 .menu-options li a {
     color: #fff;
     text-decoration: none;
+    font-family: 'Source Sans 3', sans-serif;
+    transition: color 0.6s; /* Adicione uma transição de 0,3 segundos para a propriedade "color" */
+}
+
+.menu-options li a:hover {
+    color: orange; /* Altere a cor para laranja quando o mouse estiver sobre o elemento */
 }
 
 .logo img {
-    width: 180px;
-    height: 60px;
-}
-
-.social-icons a {
-    margin-left: 10px;
+    max-height: 10vh;
+    /* Define o tamanho máximo da imagem da logo */
+    width: auto;
 }
 
 .social-icons img {
-    width: 30px;
-    height: 30px;
+    max-height: 24px;
+    /* Define o tamanho máximo da imagem do botão do WhatsApp */
+    width: auto;
 }
 
 /* Configurações do Navigator Secundário */
@@ -145,13 +178,14 @@ header {
 
 .section-imovel {
     display: flex;
-    margin: 25px auto;
+    margin: 0 auto; /* COLOCAR MARGIN PADRÃO ENTRE SECTION */
 }
 
 .container-imovel {
     flex: 1;
     box-sizing: border-box;
 }
+
 .container-imovel img {
     width: auto;
     max-width: 100%;
@@ -167,13 +201,16 @@ header {
     padding-left: 10px;
 }
 
-.imovel-nome, .imovel-bairro {
+.imovel-nome,
+.imovel-bairro {
     margin-bottom: 6px;
 }
 
 .imovel-nome {
-    font-size: 28px;
-    font-weight: 700;
+    font-family: 'Brother 1816';
+    font-weight: bold;
+    font-style: normal;
+    font-size: xx-large;
     color: #425424;
 }
 
@@ -290,8 +327,10 @@ header {
 }
 
 .modal-content {
-    max-width: 100vw; /* Defina o tamanho máximo desejado, como 90% */
-    max-height: 80vh; /* Defina o tamanho máximo desejado, como 90% */
+    max-width: 100vw;
+    /* Defina o tamanho máximo desejado, como 90% */
+    max-height: 80vh;
+    /* Defina o tamanho máximo desejado, como 90% */
     margin: auto;
     display: block;
     position: absolute;
@@ -306,7 +345,7 @@ header {
     right: 0;
     padding: 16px;
     color: white;
-     font-size: 24px;
+    font-size: 24px;
     cursor: pointer;
 }
 
@@ -332,7 +371,7 @@ header {
     color: white;
 }
 
-  /* Configuração da Section Localização do Imóvel */
+/* Configuração da Section Localização do Imóvel */
 
 .imovel-localizacao {
     width: 100%;
@@ -372,10 +411,15 @@ header {
     width: 100%;
 }
 
+.mapa iframe {
+    width: 100%;
+    height: 80vh;
+}
+
 /* Configuração do Formulário de Contato */
 
 .formulario {
-    margin-top: 50px;
+    margin: 0 auto; /*COLOCAR MARGIN PADRÃO */
 }
 
 .formulario h2 {
@@ -391,12 +435,16 @@ header {
     justify-content: space-between;
 }
 
-.form-nome, .form-email, .form-tel {
+.form-nome,
+.form-email,
+.form-tel {
     width: 49%;
     margin-bottom: 10px;
 }
 
-.form-nome input, .form-email input, .form-tel input {
+.form-nome input,
+.form-email input,
+.form-tel input {
     width: 100%;
     outline: none;
     border: none;
@@ -472,11 +520,13 @@ footer {
 .copy a {
     border: none;
     color: #fff;
-    transition: color 0.5s ease; /* Adicione uma transição suave para a mudança de cor */
+    transition: color 0.6s ease;
+    /* Adicione uma transição suave para a mudança de cor */
 }
 
 .copy a:hover {
-    color: orange; /* Muda a cor do texto para laranja no hover */
+    color: orange;
+    /* Muda a cor do texto para laranja no hover */
 }
 
 .content-link {
@@ -499,17 +549,81 @@ footer {
     color: #b5b2b2;
     text-decoration: none;
     font-size: small;
-    transition: color 0.5s ease; /* Adicione uma transição suave para a mudança de cor */
+    transition: color 0.6s ease;
+    /* Adicione uma transição suave para a mudança de cor */
 }
 
 .content-link li a:hover {
-    color: orange; /* Muda a cor do texto para laranja no hover */
+    color: orange;
+    /* Muda a cor do texto para laranja no hover */
 }
 
 .content-contato {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .content-contato li {
     margin: 5px 10px 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container-corretores h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #565656;
+    text-align: center;
+}
+
+.content-corretores {
+    display: flex;
+    justify-content: space-between;
+}
+
+.corretor {
+    text-align: center;
+    background-color: #0f203e;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.corretor img {
+    border-radius: 50%;
+    /* Isso tornará as imagens redondas */
+    width: 150px;
+    /* Ajuste o tamanho conforme necessário */
+    height: 150px;
+    /* Ajuste o tamanho conforme necessário */
+    object-fit: cover;
+    /* Isso mantém a proporção da imagem */
+    margin-bottom: 5px;
+}
+
+.corretor p {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.corretor button {
+    color: black;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    width: 8vw;
+    border-radius: 5px;
 }

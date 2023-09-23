@@ -1,5 +1,4 @@
 /* Configurações da Página */
-
 * {
     font-family: 'Source Sans 3', sans-serif;
     box-sizing: border-box;
@@ -14,8 +13,15 @@ main {
     box-sizing: border-box;
 }
 
-/* Configurações do Header */
+main h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #565656;
+    text-align: center;
+}
 
+/* Configurações do Header */
 header {
     position: relative;
     width: 100%;
@@ -30,7 +36,6 @@ header {
 }
 
 /* Configurações do Navigator Principal */
-
 .hidden {
     display: none;
 }
@@ -113,7 +118,6 @@ header {
 }
 
 /* Configurações do Navigator Secundário */
-
 .nav-header-bottom {
     background-color: #0f203e;
     width: 100%;
@@ -149,27 +153,16 @@ header {
     color: #ffff;
     position: relative;
     padding-bottom: 2px;
+    font-weight: normal; /* Garante que a fonte não seja negrito por padrão */
+    transition: font-weight 0.5s ease; /* Adiciona uma transição para suavizar a alteração da fonte */
 }
 
-.li-header-bottom a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background-color: orange;
-    transform: scaleX(0);
-    transform-origin: bottom left;
-    transition: transform 0.3s ease;
+.li-header-bottom a:hover {
+    font-weight: bold; /* Altera para negrito ao passar o mouse */
 }
 
-.li-header-bottom a:hover::after {
-    transform: scaleX(1);
-}
 
 /* Configuração Section Informações do Imóvel */
-
 .container-main {
     width: auto;
     height: auto;
@@ -261,11 +254,11 @@ header {
     gap: 10px;
 }
 
-.content-imovel-descricao h2 {
+.content-imovel-descricao h3 {
     font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 5px;
     color: #897773;
-    font-size: 22px;
-    text-align: justify;
 }
 
 .content-imovel-descricao p {
@@ -273,15 +266,6 @@ header {
 }
 
 /* Configuração da Galeria do Imóvel */
-
-.imovel-galeria h2 {
-    margin-bottom: 20px;
-    font-size: 28px;
-    font-weight: 700;
-    color: #565656;
-    text-align: center;
-}
-
 .slide-container {
     display: flex;
     align-items: center;
@@ -381,13 +365,6 @@ header {
     text-align: center;
 }
 
-.container-imovel-localizacao h2 {
-    margin-bottom: 20px;
-    font-size: 28px;
-    font-weight: 700;
-    color: #565656;
-}
-
 .container-imovel-localizacao button {
     background: #b5b2b2;
     color: #fff;
@@ -420,14 +397,6 @@ header {
 
 .formulario {
     margin: 0 auto; /*COLOCAR MARGIN PADRÃO */
-}
-
-.formulario h2 {
-    margin-bottom: 20px;
-    font-size: 28px;
-    font-weight: 700;
-    color: #565656;
-    text-align: center;
 }
 
 .form {

@@ -20,6 +20,7 @@
 
   <header>
 
+    <!-- Inicio do Navegador Principal no Topo do Header -->
     <nav class="nav-header-top">
       <div class="menu-container">
         <div class="menu-button" id="menu-button">
@@ -40,9 +41,13 @@
         </a>
       </div>
     </nav>
+    <!-- Fim do Navegador Principal no Topo do Header -->
 
+    <!-- Inicio da Imagem de Fundo do Header -->
     <img class="img-fundo" src="./assets/img/foto-de-capa.jpg" alt="Foto do Empreendimento">
+    <!-- Fim da Imagem de Fundo do Header -->
 
+    <!-- Inicio do Navegador Secundário Fixado -->
     <nav class="nav-header-bottom" id="fixedNav">
       <ul class="ul-header-bottom">
         <li class="li-header-bottom">
@@ -50,7 +55,7 @@
         </li>
 
         <li class="li-header-bottom">
-          <a href="#section-imovel">Lotes</a>
+          <a href="#section-imovel">Lotes Disponíveis</a>
         </li>
 
         <li class="li-header-bottom">
@@ -63,7 +68,9 @@
       </ul>
     </nav>
   </header>
+  <!-- Fim do Navegador Secundário Fixado -->
 
+  <!-- Inicio das informações do Empreendimento -->
   <main class="container-main">
     <section class="section-imovel" id="section-imovel">
       <div class="container-imovel">
@@ -71,8 +78,8 @@
       </div>
       <div class="content-imovel">
         <div class="content-imovel-main">
-          <h2 class="imovel-nome">Estância dos Montes Home Resort</h2>
-          <p class="imovel-bairro">Tomazzeti</p>
+          <h1 class="imovel-nome">O Estância dos Montes: Home Resort</h1>
+          <p class="imovel-bairro">Fase II</p>
           <p class="imovel-status">Em construção</p>
         </div>
 
@@ -98,19 +105,38 @@
         </div>
 
         <div class="content-imovel-descricao">
-          <h2>Unidade em que o projeto reflete a necessidade do usuário</h2>
-          <p>Contando com um living generoso integrado com cozinha, esse ambiente focou a vivência dos moradores no dia
-            a dia e também para receber visitas e desfrutar de uma refeição entre amigos e família. O mesmo possui uma
-            janela de chão a teto com muita luz natural e uma laje de concreto aparente de encher os olhos de todo
-            apreciador de boa arquitetura. </p>
+          <h3>Agora você pode ter um Resort para Chamar de Casa</h3>
+          <p>O Estância dos Montes, em sua segunda fase, proporciona
+            o melhor que o alto padrão de Santa Maria pode oferecer
+            aos seus clientes.</p>
+            <p>Sucesso absoluto em sua primeira fase, a segunda, com
+            poucas unidades disponíveis, contempla contato com a
+            natureza, segurança e uma estrutura de Resort para você
+            chamar de seu.</p>
+        </div>
+
+        <div class="content-whatsapp">
+          <a class="whatsapp-button" href="https://api.whatsapp.com/send?phone=SEUNUMERODOTELEFONE" target="_blank">
+            <img src="./assets/icons/Whatsapp.png" alt="Ícone do WhatsApp">
+            <span>WhatsApp</span>
+          </a>          
         </div>
       </div>
     </section>
+    <!-- Fim das informações do Empreendimento -->
+
+    <!-- Inicio da Section Lotes Disponíveis -->
+    <section class="lotes-disponiveis" id="lotes-disponiveis">
+      <h2>Lotes Disponíveis</h2>
+      <div>
+        <img src="" alt="">
+      </div>
+    </section>
+    <!-- Fim da Section Lotes Disponíveis -->
 
     <!-- Inicio da Section Galeria de Imagens do Imóvel -->
-
     <section class="imovel-galeria" id="imovel-galeria">
-      <h2>Empreendimento Cícero Barreto</h2>
+      <h2>Empreendimento</h2>
       <div class="slide-container">
         <button class="prev-button" onclick="prevImage()">&#10094;</button>
         <img class="slide-image" src="./assets/img/foto-1.jpg" alt="Imagem 1" onclick="openImage(0)">
@@ -137,9 +163,9 @@
         </div>
       </div>
     </section>
-
     <!-- Fim da Section Galeria de Imagens do Imóvel -->
 
+    <!-- Inicio da Sectio de Localização do Imóvel -->
     <section class="imovel-localizacao" id="imovel-localizacao">
       <div class="container-imovel-localizacao">
         <h2>Localização</h2>
@@ -153,9 +179,9 @@
         </div>
       </div>
     </section>
-    
-    
-
+    <!-- Fim da Sectio de Localização do Imóvel -->
+      
+    <!-- Inicio da Section de Corretores -->
     <section class="container-corretores">
       <h2>Fale com um Especialista</h2>
       <div class="content-corretores">
@@ -187,7 +213,9 @@
         
     </div>
     </section>
+    <!-- Fim da Section de Corretores -->
 
+    <!-- Inicio do Formulario de Contato -->
     <section class="formulario">
       <h2>Gostaria de saber mais?</h2>
       <form action="processar_formulario.php" method="POST">
@@ -227,6 +255,7 @@
 
       </form>
     </section>
+    <!-- Fim do Formulario de Contato -->
 
   </main>
 

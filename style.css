@@ -21,6 +21,10 @@ main h2 {
     text-align: center;
 }
 
+section {
+    margin-bottom: 80px; /* Aqui você pode definir o valor de margem desejado */
+}
+
 /* Configurações do Header */
 header {
     position: relative;
@@ -166,12 +170,11 @@ header {
 .container-main {
     width: auto;
     height: auto;
-    margin: 0 auto;
+    margin-top: 60px;
 }
 
 .section-imovel {
     display: flex;
-    margin: 0 auto; /* COLOCAR MARGIN PADRÃO ENTRE SECTION */
 }
 
 .container-imovel {
@@ -264,6 +267,32 @@ header {
 .content-imovel-descricao p {
     text-align: justify;
 }
+
+.whatsapp-button {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25d366; /* Cor de fundo do WhatsApp */
+    color: #fff; /* Cor do texto */
+    text-decoration: none;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: bold;
+    border-radius: 5px; /* Cantos arredondados */
+    padding: 10px 20px; /* Espaçamento interno */
+    transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+  }
+  
+  .whatsapp-button img {
+    width: 20px; /* Tamanho do ícone do WhatsApp */
+    height: 20px;
+    margin-right: 10px; /* Espaçamento à direita do ícone */
+  }
+  
+  .whatsapp-button:hover {
+    background-color: #128c7e; /* Altera a cor de fundo no hover */
+  }
+  
 
 /* Configuração da Galeria do Imóvel */
 .slide-container {
@@ -561,6 +590,8 @@ footer {
 .content-corretores {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 100%;
 }
 
 .corretor {

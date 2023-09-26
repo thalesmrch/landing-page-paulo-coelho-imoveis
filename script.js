@@ -127,5 +127,85 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   });
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Função para formatar o número com vírgula e casas decimais
+function formatNumber(number, decimalPlaces) {
+    return number.toLocaleString('pt-BR', { minimumFractionDigits: decimalPlaces, maximumFractionDigits: decimalPlaces });
+}
+
+// Função para animar o contador
+function animateValue(element, start, end, duration, complement, decimalPlaces) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const formattedEnd = formatNumber(end, decimalPlaces); // Formata o número final
+        const current = formatNumber(progress * (end - start) + start, decimalPlaces); // Formata o número atual
+        element.textContent = current + complement;
+        if (progress < 1) {
+            requestAnimationFrame(step);
+        }
+    };
+
+    // Verificar se o contador já foi acionado
+    if (!element.dataset.counted) {
+        element.dataset.counted = "true"; // Defina um atributo de dados para marcar como contado
+        requestAnimationFrame(step);
+    }
+}
+
+// Função para verificar se o elemento está visível na janela
+function isElementInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Seletor para todos os elementos com a classe "contador"
+const contadorElements = document.querySelectorAll('.contador');
+
+// Função para iniciar o contador quando o elemento estiver visível
+function startCounterWhenVisible(entries) {
+    entries.forEach((entry) => {
+        const element = entry.target;
+        if (entry.isIntersecting) {
+            const startValue = 0;
+            const endValue = parseFloat(element.textContent.replace(/\./g, '').replace(',', '.')); // Remove pontos e substitui vírgula por ponto
+            const decimalPlaces = parseInt(element.dataset.decimalPlaces) || 2; // Obtém o número de casas decimais do atributo de dados ou assume 2 casas decimais por padrão
+            const duration = 2500; // Duração da animação em milissegundos (2.5 segundos neste caso)
+            animateValue(element, startValue, endValue, duration, element.dataset.complement, decimalPlaces);
+        }
+    });
+}
+
+// Adicione um observador de interseção para verificar quando os elementos estão visíveis
+const observer = new IntersectionObserver(startCounterWhenVisible);
+contadorElements.forEach((element) => {
+    observer.observe(element);
+});
+
+

@@ -579,51 +579,58 @@ footer {
 
 
 
+.container-corretores {
+    text-align: center;
+    padding: 20px 0;
+}
+
 .container-corretores h2 {
-    margin-bottom: 20px;
-    font-size: 28px;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #565656;
-    text-align: center;
 }
 
 .content-corretores {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     max-width: 100%;
+    margin-top: 20px;
 }
 
 .corretor {
     text-align: center;
-    background-color: #0f203e;
+    background-color: #fff; /* Altere para a cor de fundo desejada */
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicione uma sombra suave */
 }
 
 .corretor img {
     border-radius: 50%;
-    /* Isso tornará as imagens redondas */
-    width: 150px;
-    /* Ajuste o tamanho conforme necessário */
-    height: 150px;
-    /* Ajuste o tamanho conforme necessário */
+    width: 150px; /* Tamanho da imagem */
+    height: 150px; /* Tamanho da imagem */
     object-fit: cover;
-    /* Isso mantém a proporção da imagem */
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .corretor p {
     margin-bottom: 10px;
-    font-weight: bold;
-    color: #fff;
+    font-weight: 700;
+    color: #333; /* Altere para a cor desejada */
 }
 
-.corretor button {
-    color: black;
-    background-color: #fff;
-    border: none;
-    outline: none;
-    width: 8vw;
+.whatsapp-button-corretor {
+    display: inline-block;
+    padding: 10px 20px; /* Tamanho do botão */
+    background-color: #25d366; /* Cor do WhatsApp */
+    color: #fff; /* Cor do texto */
+    text-decoration: none;
     border-radius: 5px;
+    transition: background-color 0.3s ease; /* Efeito de transição de cor de fundo */
+}
+
+.whatsapp-button-corretor:hover {
+    background-color: #128C7E; /* Cor de destaque no hover */
 }
